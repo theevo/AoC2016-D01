@@ -15,9 +15,17 @@ class PositionController {
     
     init() {
         loadInputFile()
+        run()
     }
     
-    func loadInputFile() {
+    private func run() {
+        for bearing in instructionSequence {
+            position.move(bearing: bearing)
+        }
+    }
+    
+    
+    private func loadInputFile() {
         if let filepath = Bundle.main.path(forResource: "inputEasterBunnyInstructions", ofType: "") {
             do {
                 let contents = try String(contentsOfFile: filepath)

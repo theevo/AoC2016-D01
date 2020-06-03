@@ -18,7 +18,8 @@ class ViewController: UIViewController {
     
     func loadPositionController() {
         let pc = PositionController()
-        print("Here is the instruction sequence: \(pc.instructionSequence)")
+        print("Final position: \(pc.position.coordinatesAsString)")
+        print("Distance from starting position: \(pc.position.distance)")
     }
 
 
