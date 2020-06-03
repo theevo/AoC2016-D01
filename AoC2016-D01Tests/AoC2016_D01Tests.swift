@@ -77,5 +77,15 @@ class AoC2016_D01Tests: XCTestCase {
         
         XCTAssertEqual(direction, .north, "Turning R from West should be North.")
     }
+    
+    func testChangeDirection() {
+        sut.changeDirection(leftOrRight: "L")
+        XCTAssertEqual(sut.heading, .west, "Turning L from North should yield West.")
+        
+        sut.changeDirection(leftOrRight: "R")
+        XCTAssertEqual(sut.heading, .north, "Turning R from West should yield North.")
+    }
+    
+    
 
 }
