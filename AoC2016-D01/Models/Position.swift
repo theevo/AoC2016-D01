@@ -14,7 +14,6 @@ class Position {
     var heading: Direction = .north
     
     var coordinatesAsString: String {
-        print("(\(x),\(y)) facing \(heading)")
         return "(\(x),\(y)) facing \(heading)"
     }
     

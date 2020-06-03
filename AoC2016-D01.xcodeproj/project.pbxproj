@@ -17,6 +17,7 @@
 		ACC211A724880F060014B8D0 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC211A624880F060014B8D0 /* Position.swift */; };
 		ACC211AF2488128E0014B8D0 /* AoC2016_D01Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC211AE2488128E0014B8D0 /* AoC2016_D01Tests.swift */; };
 		ACC211B7248817230014B8D0 /* Turn.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC211B6248817230014B8D0 /* Turn.swift */; };
+		ACC211BA24884ACB0014B8D0 /* PositionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC211B924884ACB0014B8D0 /* PositionController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		ACC211AE2488128E0014B8D0 /* AoC2016_D01Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AoC2016_D01Tests.swift; sourceTree = "<group>"; };
 		ACC211B02488128E0014B8D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACC211B6248817230014B8D0 /* Turn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Turn.swift; sourceTree = "<group>"; };
+		ACC211B924884ACB0014B8D0 /* PositionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +87,8 @@
 		ACC2118B2487FE8F0014B8D0 /* AoC2016-D01 */ = {
 			isa = PBXGroup;
 			children = (
+				ACC211B824884AB20014B8D0 /* Controllers */,
 				ACC211A1248801C70014B8D0 /* Models */,
-				ACC211902487FE8F0014B8D0 /* ViewController.swift */,
 				ACC211922487FE8F0014B8D0 /* Main.storyboard */,
 				ACC211A0248800920014B8D0 /* Resources */,
 			);
@@ -122,6 +124,15 @@
 				ACC211B02488128E0014B8D0 /* Info.plist */,
 			);
 			path = "AoC2016-D01Tests";
+			sourceTree = "<group>";
+		};
+		ACC211B824884AB20014B8D0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ACC211B924884ACB0014B8D0 /* PositionController.swift */,
+				ACC211902487FE8F0014B8D0 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +238,7 @@
 			files = (
 				ACC211912487FE8F0014B8D0 /* ViewController.swift in Sources */,
 				ACC2118D2487FE8F0014B8D0 /* AppDelegate.swift in Sources */,
+				ACC211BA24884ACB0014B8D0 /* PositionController.swift in Sources */,
 				ACC2118F2487FE8F0014B8D0 /* SceneDelegate.swift in Sources */,
 				ACC211A724880F060014B8D0 /* Position.swift in Sources */,
 				ACC211B7248817230014B8D0 /* Turn.swift in Sources */,
