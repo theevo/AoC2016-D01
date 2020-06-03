@@ -26,5 +26,19 @@ class AoC2016_D01Tests: XCTestCase {
     func testStartingPosition() {
         XCTAssertEqual(sut.coordinatesAsString, "(0,0) facing north", "Starting position is not correct. Expected 0,0 facing north.")
     }
+    
+    func testTurningLeft() throws {
+        let leftTurn = "L"
+        let newDirection = try XCTUnwrap(sut.heading.turn(leftOrRight: leftTurn))
+        
+        XCTAssertEqual(newDirection, .west, "Turning L from North should be West.")
+    }
+    
+    func testTurningRight() throws {
+        let rightTurn = "R"
+        let newDirection = try XCTUnwrap(sut.heading.turn(leftOrRight: rightTurn))
+        
+        XCTAssertEqual(newDirection, .east, "Turning R from North should be East.")
+    }
 
 }
