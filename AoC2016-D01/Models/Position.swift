@@ -25,7 +25,14 @@ extension Position {
         
         guard leftOrRight == "L" || leftOrRight == "R" else { return }
         
-        let newDirection = self.heading.turn(leftOrRight: leftOrRight)
-        self.heading = newDirection!
+        if let turn = Turn(leftOrRight: leftOrRight) {
+            
+            switch turn {
+            case .left:
+                self.heading = self.heading.turnLeft()
+            case .right:
+                self.heading = self.heading.turnRight()
+            }
+        }
     }
 }

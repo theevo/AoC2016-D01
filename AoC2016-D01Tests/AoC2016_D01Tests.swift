@@ -27,20 +27,6 @@ class AoC2016_D01Tests: XCTestCase {
         XCTAssertEqual(sut.coordinatesAsString, "(0,0) facing north", "Starting position is not correct. Expected 0,0 facing north.")
     }
     
-    func testTurningLeft() throws {
-        let leftTurn = "L"
-        let newDirection = try XCTUnwrap(sut.heading.turn(leftOrRight: leftTurn))
-        
-        XCTAssertEqual(newDirection, .west, "Turning L from North should be West.")
-    }
-    
-    func testTurningRight() throws {
-        let rightTurn = "R"
-        let newDirection = try XCTUnwrap(sut.heading.turn(leftOrRight: rightTurn))
-        
-        XCTAssertEqual(newDirection, .east, "Turning R from North should be East.")
-    }
-    
     func testTurnInitWithString() throws {
         let turnL = try XCTUnwrap(Turn(leftOrRight: "L"))
         
@@ -49,6 +35,47 @@ class AoC2016_D01Tests: XCTestCase {
         let turnR = try XCTUnwrap(Turn(leftOrRight: "R"))
         
         XCTAssertEqual(turnR, .right, "Initializing a Turn with R should yield .right")
+    }
+    
+    func testTurnLeft() throws {
+        var direction: Direction = .north
+        
+        direction = direction.turnLeft()
+        
+        XCTAssertEqual(direction, .west, "Turning L from North should be West.")
+        
+        direction = direction.turnLeft()
+        
+        XCTAssertEqual(direction, .south, "Turning L from West should be South.")
+        
+        direction = direction.turnLeft()
+        
+        XCTAssertEqual(direction, .east, "Turning L from South should be East.")
+        
+        direction = direction.turnLeft()
+        
+        XCTAssertEqual(direction, .north, "Turning L from East should be North.")
+        
+    }
+    
+    func testTurningRight() throws {
+        var direction: Direction = .north
+        
+        direction = direction.turnRight()
+        
+        XCTAssertEqual(direction, .east, "Turning R from North should be East.")
+        
+        direction = direction.turnRight()
+        
+        XCTAssertEqual(direction, .south, "Turning R from West should be South.")
+        
+        direction = direction.turnRight()
+        
+        XCTAssertEqual(direction, .west, "Turning R from South should be West.")
+        
+        direction = direction.turnRight()
+        
+        XCTAssertEqual(direction, .north, "Turning R from West should be North.")
     }
 
 }

@@ -27,32 +27,30 @@ enum Direction {
         }
     }
     
-    func turn(leftOrRight: String) -> Direction? {
-        if leftOrRight == "L" {
-            switch self {
-            case .north:
-                return .west
-            case .south:
-                return .east
-            case .east:
-                return .north
-            case .west:
-                return .south
-            }
-        } else if leftOrRight == "R" {
-            switch self {
-            case .north:
-                return .east
-            case .south:
-                return .west
-            case .east:
-                return .south
-            case .west:
-                return .north
-            }
+    func turnLeft() -> Direction {
+        switch self {
+        case .north:
+            return .west
+        case .south:
+            return .east
+        case .east:
+            return .north
+        case .west:
+            return .south
         }
-        
-        return nil
+    }
+    
+    func turnRight() -> Direction {
+        switch self {
+        case .north:
+            return .east
+        case .south:
+            return .west
+        case .east:
+            return .south
+        case .west:
+            return .north
+        }
     }
 }
 
