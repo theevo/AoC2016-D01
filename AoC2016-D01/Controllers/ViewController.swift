@@ -18,6 +18,9 @@ class ViewController: UIViewController {
     
     func loadPositionController() {
         let pc = PositionController()
+        
+        pc.run()
+        
         print("Final position: \(pc.position.coordinatesAsString)")
         print("Distance from starting position: \(pc.position.distance)")
     }

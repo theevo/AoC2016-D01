@@ -11,11 +11,11 @@ import XCTest
 
 class AoC2016_D01Tests: XCTestCase {
     
-    var sut: Position!
+    var sut: PositionController!
 
     override func setUpWithError() throws {
         super.setUp()
-        sut = Position()
+        sut = PositionController()
     }
 
     override func tearDownWithError() throws {
@@ -24,7 +24,7 @@ class AoC2016_D01Tests: XCTestCase {
     }
 
     func testStartingPosition() {
-        XCTAssertEqual(sut.coordinatesAsString, "(0,0) facing north", "Starting position is not correct. Expected 0,0 facing north.")
+        XCTAssertEqual(sut.position.coordinatesAsString, "(0,0) facing north", "Starting position is not correct. Expected 0,0 facing north.")
     }
     
     func testTurnLeft() throws {
@@ -69,17 +69,17 @@ class AoC2016_D01Tests: XCTestCase {
     }
     
     func testChangeDirection() {
-        sut.changeDirection(.left)
-        XCTAssertEqual(sut.heading, .west, "Turning L from North should yield West.")
+        sut.position.changeDirection(.left)
+        XCTAssertEqual(sut.position.heading, .west, "Turning L from North should yield West.")
         
-        sut.changeDirection(.right)
-        XCTAssertEqual(sut.heading, .north, "Turning R from West should yield North.")
+        sut.position.changeDirection(.right)
+        XCTAssertEqual(sut.position.heading, .north, "Turning R from West should yield North.")
     }
     
     func testExtractBearing() {
         var testString = "L9"
         
-        var tuple = sut.extract(bearing: testString)
+        var tuple = sut.position.extract(bearing: testString)
         
         XCTAssertEqual(tuple.turn, .left, "Fed L9 to Position.extract and expected left turn.")
         
@@ -87,7 +87,7 @@ class AoC2016_D01Tests: XCTestCase {
         
         testString = "R150"
         
-        tuple = sut.extract(bearing: testString)
+        tuple = sut.position.extract(bearing: testString)
         
         XCTAssertEqual(tuple.turn, .right, "Fed R150 to Position.extract and expected right turn.")
         
@@ -97,23 +97,29 @@ class AoC2016_D01Tests: XCTestCase {
     func testMove() {
         var bearing = "L33"
         
-        sut.move(bearing: bearing)
+        sut.position.move(bearing: bearing)
         
-        XCTAssertEqual(sut.coordinatesAsString, "(-33,0) facing west", "Postion.move was given L33 and expected coordinate to be -33, 0 facing west.")
+        XCTAssertEqual(sut.position.coordinatesAsString, "(-33,0) facing west", "Postion.move was given L33 and expected coordinate to be -33, 0 facing west.")
         
         bearing = "L66"
         
-        sut.move(bearing: bearing)
+        sut.position.move(bearing: bearing)
         
-        XCTAssertEqual(sut.coordinatesAsString, "(-33,-66) facing south", "Postion.move was given L66 and expected coordinate to be -33, -66 facing south.")
+        XCTAssertEqual(sut.position.coordinatesAsString, "(-33,-66) facing south", "Postion.move was given L66 and expected coordinate to be -33, -66 facing south.")
         
         bearing = "R3"
         
-        sut.move(bearing: bearing)
+        sut.position.move(bearing: bearing)
         
-        XCTAssertEqual(sut.coordinatesAsString, "(-36,-66) facing west", "Postion.move was given L66 and expected coordinate to be -36, -66 facing west.")
+        XCTAssertEqual(sut.position.coordinatesAsString, "(-36,-66) facing west", "Postion.move was given L66 and expected coordinate to be -36, -66 facing west.")
         
-        XCTAssertEqual(sut.distance, 102, "Expected distance to be 102 after 3 moves L33, L66, R3.")
+        XCTAssertEqual(sut.position.distance, 102, "Expected distance to be 102 after 3 moves L33, L66, R3.")
+    }
+    
+    func testLoadInputFile() {
+        XCTAssertFalse(sut.instructionSequence.isEmpty, "Expected PositionController.instructionSequence to not be empty.")
+        
+        XCTAssertEqual(sut.instructionSequence.count, 138, "Expected count of PositionController.instructionSequence to be 138.")
     }
 
 }

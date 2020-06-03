@@ -15,10 +15,9 @@ class PositionController {
     
     init() {
         loadInputFile()
-        run()
     }
     
-    private func run() {
+    func run() {
         for bearing in instructionSequence {
             position.move(bearing: bearing)
         }
