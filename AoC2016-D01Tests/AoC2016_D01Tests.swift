@@ -27,16 +27,6 @@ class AoC2016_D01Tests: XCTestCase {
         XCTAssertEqual(sut.coordinatesAsString, "(0,0) facing north", "Starting position is not correct. Expected 0,0 facing north.")
     }
     
-    func testTurnInitWithString() throws {
-        let turnL = try XCTUnwrap(Turn(leftOrRight: "L"))
-        
-        XCTAssertEqual(turnL, .left, "Initializing a Turn with L should yield .left")
-        
-        let turnR = try XCTUnwrap(Turn(leftOrRight: "R"))
-        
-        XCTAssertEqual(turnR, .right, "Initializing a Turn with R should yield .right")
-    }
-    
     func testTurnLeft() throws {
         var direction: Direction = .north
         

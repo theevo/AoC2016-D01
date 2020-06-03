@@ -11,15 +11,4 @@ import Foundation
 enum Turn {
     case left
     case right
-    
-    init?(leftOrRight: String) {
-        if leftOrRight == "L" {
-            self = .left
-            return
-        } else if leftOrRight == "R" {
-            self = .right
-            return
-        }
-        return nil
-    }
 }
