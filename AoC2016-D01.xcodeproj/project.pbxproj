@@ -18,6 +18,7 @@
 		ACC211AF2488128E0014B8D0 /* AoC2016_D01Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC211AE2488128E0014B8D0 /* AoC2016_D01Tests.swift */; };
 		ACC211B7248817230014B8D0 /* Turn.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC211B6248817230014B8D0 /* Turn.swift */; };
 		ACC211BA24884ACB0014B8D0 /* PositionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC211B924884ACB0014B8D0 /* PositionController.swift */; };
+		ACC211BC24884E0F0014B8D0 /* inputEasterBunnyInstructions in Resources */ = {isa = PBXBuildFile; fileRef = ACC211BB24884E0F0014B8D0 /* inputEasterBunnyInstructions */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		ACC211B02488128E0014B8D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACC211B6248817230014B8D0 /* Turn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Turn.swift; sourceTree = "<group>"; };
 		ACC211B924884ACB0014B8D0 /* PositionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionController.swift; sourceTree = "<group>"; };
+		ACC211BB24884E0F0014B8D0 /* inputEasterBunnyInstructions */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = inputEasterBunnyInstructions; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		ACC211A0248800920014B8D0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ACC211BB24884E0F0014B8D0 /* inputEasterBunnyInstructions */,
 				ACC2118C2487FE8F0014B8D0 /* AppDelegate.swift */,
 				ACC2118E2487FE8F0014B8D0 /* SceneDelegate.swift */,
 				ACC211952487FE900014B8D0 /* Assets.xcassets */,
@@ -217,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACC211992487FE900014B8D0 /* LaunchScreen.storyboard in Resources */,
+				ACC211BC24884E0F0014B8D0 /* inputEasterBunnyInstructions in Resources */,
 				ACC211962487FE900014B8D0 /* Assets.xcassets in Resources */,
 				ACC211942487FE8F0014B8D0 /* Main.storyboard in Resources */,
 			);
