@@ -56,15 +56,23 @@
 		ACC2118B2487FE8F0014B8D0 /* AoC2016-D01 */ = {
 			isa = PBXGroup;
 			children = (
-				ACC2118C2487FE8F0014B8D0 /* AppDelegate.swift */,
-				ACC2118E2487FE8F0014B8D0 /* SceneDelegate.swift */,
 				ACC211902487FE8F0014B8D0 /* ViewController.swift */,
 				ACC211922487FE8F0014B8D0 /* Main.storyboard */,
+				ACC211A0248800920014B8D0 /* Resources */,
+			);
+			path = "AoC2016-D01";
+			sourceTree = "<group>";
+		};
+		ACC211A0248800920014B8D0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ACC2118C2487FE8F0014B8D0 /* AppDelegate.swift */,
+				ACC2118E2487FE8F0014B8D0 /* SceneDelegate.swift */,
 				ACC211952487FE900014B8D0 /* Assets.xcassets */,
 				ACC211972487FE900014B8D0 /* LaunchScreen.storyboard */,
 				ACC2119A2487FE900014B8D0 /* Info.plist */,
 			);
-			path = "AoC2016-D01";
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,7 +294,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6QY69PUF72;
-				INFOPLIST_FILE = "AoC2016-D01/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/AoC2016-D01/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +312,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6QY69PUF72;
-				INFOPLIST_FILE = "AoC2016-D01/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/AoC2016-D01/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
