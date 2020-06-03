@@ -98,3 +98,10 @@ extension Position: CustomStringConvertible {
         return "(\(x),\(y))"
     }
 }
+
+extension Position: Hashable {
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(x)
+        hasher.combine(y)
+    }
+}

@@ -28,6 +28,20 @@ class PositionController {
         }
     }
     
+    func firstLocationVisitedTwice() -> Position? {
+        let mappedItems = visitedLocations.map { ($0, 1) }
+        let counts = Dictionary(mappedItems, uniquingKeysWith: +)
+        let duplicates = visitedLocations.filter { num in
+            counts[num] == 2
+        }
+        
+        
+        print(duplicates)
+        
+        return duplicates.first
+        
+    }
+    
     
     private func loadInputFile() {
         if let filepath = Bundle.main.path(forResource: "inputEasterBunnyInstructions", ofType: "") {

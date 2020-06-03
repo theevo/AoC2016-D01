@@ -21,10 +21,16 @@ class ViewController: UIViewController {
         
         pc.run()
         
-        print("Final position: \(pc.position.coordinatesAsString)")
-        print("Distance from starting position: \(pc.position.distance)")
+        print("Part 1 position: \(pc.position.coordinatesAsString)")
+        print("Distance to part 1 position: \(pc.position.distance)")
         print("Visited Locations:")
         print(pc.visitedLocations)
+        
+        
+        guard let finalPosition = pc.firstLocationVisitedTwice() else { return }
+        
+        print("Part 2 position: \(finalPosition)")
+        print("Distance to Part 2 position: \(finalPosition.distance)")
     }
 }
 
