@@ -11,15 +11,23 @@ import Foundation
 class PositionController {
     
     var position = Position()
-    let easyMockData = ["R2", "L3", "R2", "R4", "L2"]
+    var instructionSequence: [String] = []
     
     init() {
-        for bearing in easyMockData {
-            position.move(bearing: bearing)
-        }
-        
-        print(position.coordinatesAsString)
+        loadInputFile()
     }
     
-    
+    func loadInputFile() {
+        if let filepath = Bundle.main.path(forResource: "inputEasterBunnyInstructions", ofType: "") {
+            do {
+                let contents = try String(contentsOfFile: filepath)
+                print(contents)
+            } catch {
+                // contents could not be loaded
+                print(error)
+            }
+        } else {
+            print("didn't find the file!")
+        }
+    }
 }
