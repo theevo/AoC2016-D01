@@ -17,6 +17,12 @@ class Position {
         print("(\(x),\(y)) facing \(heading)")
         return "(\(x),\(y)) facing \(heading)"
     }
+    
+    var distance: Int {
+        let eastWest = abs(x)
+        let northSouth = abs(y)
+        return eastWest + northSouth
+    }
 }
 
 extension Position {

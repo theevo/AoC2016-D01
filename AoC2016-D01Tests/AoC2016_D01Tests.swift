@@ -122,6 +122,8 @@ class AoC2016_D01Tests: XCTestCase {
         sut.move(bearing: bearing)
         
         XCTAssertEqual(sut.coordinatesAsString, "(-36,-66) facing west", "Postion.move was given L66 and expected coordinate to be -36, -66 facing west.")
+        
+        XCTAssertEqual(sut.distance, 102, "Expected distance to be 102 after 3 moves L33, L66, R3.")
     }
 
 }
