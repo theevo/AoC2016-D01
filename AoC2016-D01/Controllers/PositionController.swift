@@ -21,9 +21,8 @@ class PositionController {
         if let filepath = Bundle.main.path(forResource: "inputEasterBunnyInstructions", ofType: "") {
             do {
                 let contents = try String(contentsOfFile: filepath)
-                print(contents)
+                instructionSequence = contents.components(separatedBy: ", ")
             } catch {
-                // contents could not be loaded
                 print(error)
             }
         } else {

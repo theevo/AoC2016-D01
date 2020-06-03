@@ -17,7 +17,8 @@ class ViewController: UIViewController {
     }
     
     func loadPositionController() {
-        let _ = PositionController()
+        let pc = PositionController()
+        print("Here is the instruction sequence: \(pc.instructionSequence)")
     }
 
 
