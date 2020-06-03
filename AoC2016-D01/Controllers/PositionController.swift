@@ -12,14 +12,19 @@ class PositionController {
     
     var position = Position()
     var instructionSequence: [String] = []
+    var visitedLocations: [Position] = []
     
     init() {
+        // Append starting position of (0,0)
+        visitedLocations.append(position.copy())
+        
         loadInputFile()
     }
     
     func run() {
         for bearing in instructionSequence {
             position.move(bearing: bearing)
+            visitedLocations.append(position.copy())
         }
     }
     

@@ -23,8 +23,8 @@ class ViewController: UIViewController {
         
         print("Final position: \(pc.position.coordinatesAsString)")
         print("Distance from starting position: \(pc.position.distance)")
+        print("Visited Locations:")
+        print(pc.visitedLocations)
     }
-
-
 }
 

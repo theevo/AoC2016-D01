@@ -22,6 +22,12 @@ class Position {
         let northSouth = abs(y)
         return eastWest + northSouth
     }
+    
+    convenience init(x: Int, y: Int) {
+        self.init()
+        self.x = x
+        self.y = y
+    }
 }
 
 extension Position {
@@ -72,5 +78,23 @@ extension Position {
         }
         
         return (turn,distance)
+    }
+    
+    func copy() -> Position {
+        let copy = Position(x: self.x, y: self.y)
+        return copy
+    }
+}
+
+extension Position: Equatable {
+    
+    static func == (lhs: Position, rhs: Position) -> Bool {
+        return lhs.x == rhs.x && lhs.y == rhs.y
+    }
+}
+
+extension Position: CustomStringConvertible {
+    var description: String {
+        return "(\(x),\(y)"
     }
 }
