@@ -95,6 +95,6 @@ extension Position: Equatable {
 
 extension Position: CustomStringConvertible {
     var description: String {
-        return "(\(x),\(y)"
+        return "(\(x),\(y))"
     }
 }
