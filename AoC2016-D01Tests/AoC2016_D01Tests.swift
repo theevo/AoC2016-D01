@@ -40,5 +40,15 @@ class AoC2016_D01Tests: XCTestCase {
         
         XCTAssertEqual(newDirection, .east, "Turning R from North should be East.")
     }
+    
+    func testTurnInitWithString() throws {
+        let turnL = try XCTUnwrap(Turn(leftOrRight: "L"))
+        
+        XCTAssertEqual(turnL, .left, "Initializing a Turn with L should yield .left")
+        
+        let turnR = try XCTUnwrap(Turn(leftOrRight: "R"))
+        
+        XCTAssertEqual(turnR, .right, "Initializing a Turn with R should yield .right")
+    }
 
 }

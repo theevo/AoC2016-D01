@@ -18,3 +18,14 @@ class Position {
         return "(\(x),\(y)) facing \(heading)"
     }
 }
+
+extension Position {
+    func changeDirection(leftOrRight: String) {
+        guard leftOrRight.count == 1 else { return }
+        
+        guard leftOrRight == "L" || leftOrRight == "R" else { return }
+        
+        let newDirection = self.heading.turn(leftOrRight: leftOrRight)
+        self.heading = newDirection!
+    }
+}
