@@ -13,11 +13,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadPositionController()
+        launch()
     }
     
-    func loadPositionController() {
+    func launch() {
         
+        PositionController.shared.loadInputFile()
         PositionController.shared.run()
         
         print("Part 1 position: \(PositionController.shared.position.coordinatesAsString)")

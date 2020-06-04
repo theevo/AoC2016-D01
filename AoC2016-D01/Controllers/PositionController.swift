@@ -27,8 +27,6 @@ class PositionController {
     init() {
         // Append starting position of (0,0)
         visitedLocations.append(position.copy())
-        
-        loadInputFile()
     }
     
     
@@ -58,10 +56,7 @@ class PositionController {
         
     }
     
-    
-    // MARK: - Private Methods
-    
-    private func loadInputFile() {
+    func loadInputFile() {
         if let filepath = Bundle.main.path(forResource: "inputEasterBunnyInstructions", ofType: "") {
             do {
                 let contents = try String(contentsOfFile: filepath)

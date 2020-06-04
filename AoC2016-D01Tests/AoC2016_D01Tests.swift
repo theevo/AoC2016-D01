@@ -117,6 +117,8 @@ class AoC2016_D01Tests: XCTestCase {
     }
     
     func testLoadInputFile() {
+        sut.loadInputFile()
+        
         XCTAssertFalse(sut.instructionSequence.isEmpty, "Expected PositionController.instructionSequence to not be empty.")
         
         XCTAssertEqual(sut.instructionSequence.count, 138, "Expected count of PositionController.instructionSequence to be 138.")
