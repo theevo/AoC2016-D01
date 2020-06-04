@@ -9,6 +9,9 @@
 import Foundation
 
 class Position {
+    
+    static var locationsVisited: [Position] = []
+    
     private var x = 0
     private var y = 0
     var heading: Direction = .north
@@ -47,6 +50,8 @@ extension Position {
         let multiplier: Int = self.heading.value // 1 or -1
         let direction = self.heading
         
+        Position.resetLocationsVisited()
+        
         for _ in 0..<distance {
             switch direction {
             case .east, .west:
@@ -55,13 +60,9 @@ extension Position {
                 y += multiplier
             }
             
-            // TODO: bad bad. you shouldn't assume that the singleton is where you'll write this stuff to. Test uses its own separate instance of PositionController, not the singleton. Need to find way to return copy of position to PositionController for logging.
-            
             let copy = self.copy()
-            PositionController.shared.log(position: copy)
+            Position.locationsVisited.append(copy)
         }
-
-        
     }
     
     func changeDirection(_ turn: Turn) {
@@ -92,6 +93,10 @@ extension Position {
     func copy() -> Position {
         let copy = Position(x: self.x, y: self.y, heading: self.heading)
         return copy
+    }
+    
+    static func resetLocationsVisited() {
+        locationsVisited = []
     }
 }
 

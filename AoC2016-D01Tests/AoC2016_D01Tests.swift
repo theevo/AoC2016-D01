@@ -125,21 +125,19 @@ class AoC2016_D01Tests: XCTestCase {
         XCTAssertEqual(sut.instructionSequence.count, 138, "Expected count of PositionController.instructionSequence to be 138.")
     }
     
-    // TODO: need to first address how PositionController.log works. then we can come back to this test.
-    
-//    func testFirstLocationVisitedTwice() throws {
-//        let mockData = ["R8","R4","R4","R8"]
-//        sut.instructionSequence = mockData
-//        sut.visitedLocations = [] // reset it, because it ran with data from inputFile
-//
-//        sut.run()
-//
-//        print("#visitedLocations")
-//        print(sut.visitedLocations)
-//
-//        let locationTwiceVisited = try XCTUnwrap( sut.firstLocationVisitedTwice())
-//
-//        XCTAssertEqual(locationTwiceVisited.coordinatesAsString, "(4,0) facing north", "Expected (4,0) facing north after inputting R8,R4,R4,R8")
-//    }
+    func testFirstLocationVisitedTwice() throws {
+        let mockData = ["R8","R4","R4","R8"]
+        sut.instructionSequence = mockData
+        sut.visitedLocations = [] // reset it, because it ran with data from inputFile
+
+        sut.run()
+
+        print("#visitedLocations")
+        print(sut.visitedLocations)
+
+        let locationTwiceVisited = try XCTUnwrap(sut.firstLocationVisitedTwice())
+
+        XCTAssertEqual(locationTwiceVisited.coordinatesAsString, "(4,0) facing north", "Expected (4,0) facing north after inputting R8,R4,R4,R8")
+    }
 
 }

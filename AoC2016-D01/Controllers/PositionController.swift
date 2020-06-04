@@ -35,11 +35,12 @@ class PositionController {
     func run() {
         for bearing in instructionSequence {
             position.move(bearing: bearing)
+            logPositionsDuringMove()
         }
     }
     
-    func log(position: Position){
-        visitedLocations.append(position)
+    func logPositionsDuringMove(){
+        visitedLocations += Position.locationsVisited
     }
     
     func firstLocationVisitedTwice() -> Position? {
