@@ -91,7 +91,6 @@
 			children = (
 				ACC211B824884AB20014B8D0 /* Controllers */,
 				ACC211A1248801C70014B8D0 /* Models */,
-				ACC211922487FE8F0014B8D0 /* Main.storyboard */,
 				ACC211A0248800920014B8D0 /* Resources */,
 			);
 			path = "AoC2016-D01";
@@ -100,7 +99,7 @@
 		ACC211A0248800920014B8D0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				ACC211BB24884E0F0014B8D0 /* inputEasterBunnyInstructions */,
+				ACC211922487FE8F0014B8D0 /* Main.storyboard */,
 				ACC2118C2487FE8F0014B8D0 /* AppDelegate.swift */,
 				ACC2118E2487FE8F0014B8D0 /* SceneDelegate.swift */,
 				ACC211952487FE900014B8D0 /* Assets.xcassets */,
@@ -134,6 +133,7 @@
 			children = (
 				ACC211B924884ACB0014B8D0 /* PositionController.swift */,
 				ACC211902487FE8F0014B8D0 /* ViewController.swift */,
+				ACC211BB24884E0F0014B8D0 /* inputEasterBunnyInstructions */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
