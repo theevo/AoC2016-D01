@@ -55,6 +55,8 @@ extension Position {
                 y += multiplier
             }
             
+            // TODO: bad bad. you shouldn't assume that the singleton is where you'll write this stuff to. Test uses its own separate instance of PositionController, not the singleton. Need to find way to return copy of position to PositionController for logging.
+            
             let copy = self.copy()
             PositionController.shared.log(position: copy)
         }
