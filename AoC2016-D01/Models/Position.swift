@@ -44,15 +44,22 @@ extension Position {
     }
     
     func advance(_ distance: Int) {
-        let multiplier: Int = self.heading.value
+        let multiplier: Int = self.heading.value // 1 or -1
         let direction = self.heading
         
-        switch direction {
-        case .east, .west:
-            x =  x + (multiplier * distance)
-        case .north, .south:
-            y = y + (multiplier * distance)
+        for _ in 0..<distance {
+            switch direction {
+            case .east, .west:
+                x += multiplier
+            case .north, .south:
+                y += multiplier
+            }
+            
+            let copy = self.copy()
+            PositionController.shared.log(position: copy)
         }
+
+        
     }
     
     func changeDirection(_ turn: Turn) {
