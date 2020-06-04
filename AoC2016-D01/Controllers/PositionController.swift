@@ -10,9 +10,19 @@ import Foundation
 
 class PositionController {
     
+    // MARK: - Singleton
+    
+    static let shared = PositionController()
+    
+    
+    // MARK: - Properties
+    
     var position = Position()
     var instructionSequence: [String] = []
     var visitedLocations: [Position] = []
+    
+    
+    // MARK: - Default Initializer
     
     init() {
         // Append starting position of (0,0)
@@ -21,10 +31,16 @@ class PositionController {
         loadInputFile()
     }
     
+    
+    // MARK: - Methods
+    
     func run() {
         for bearing in instructionSequence {
+            let startingPosition = position.copy()
+            
             position.move(bearing: bearing)
-            visitedLocations.append(position.copy())
+            
+            let endingPosition = position.copy()
         }
     }
     
@@ -42,6 +58,8 @@ class PositionController {
         
     }
     
+    
+    // MARK: - Private Methods
     
     private func loadInputFile() {
         if let filepath = Bundle.main.path(forResource: "inputEasterBunnyInstructions", ofType: "") {

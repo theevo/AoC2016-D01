@@ -17,17 +17,16 @@ class ViewController: UIViewController {
     }
     
     func loadPositionController() {
-        let pc = PositionController()
         
-        pc.run()
+        PositionController.shared.run()
         
-        print("Part 1 position: \(pc.position.coordinatesAsString)")
-        print("Distance to part 1 position: \(pc.position.distance)")
+        print("Part 1 position: \(PositionController.shared.position.coordinatesAsString)")
+        print("Distance to part 1 position: \(PositionController.shared.position.distance)")
         print("Visited Locations:")
-        print(pc.visitedLocations)
+        print(PositionController.shared.visitedLocations)
         
         
-        guard let finalPosition = pc.firstLocationVisitedTwice() else { return }
+        guard let finalPosition = PositionController.shared.firstLocationVisitedTwice() else { return }
         
         print("Part 2 position: \(finalPosition)")
         print("Distance to Part 2 position: \(finalPosition.distance)")

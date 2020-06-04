@@ -23,7 +23,7 @@ class Position {
         return eastWest + northSouth
     }
     
-    convenience init(x: Int, y: Int) {
+    convenience init(x: Int, y: Int, heading: Direction) {
         self.init()
         self.x = x
         self.y = y
@@ -81,7 +81,7 @@ extension Position {
     }
     
     func copy() -> Position {
-        let copy = Position(x: self.x, y: self.y)
+        let copy = Position(x: self.x, y: self.y, heading: self.heading)
         return copy
     }
 }
