@@ -7,15 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC72C89124894ECD00F04C8D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AC72C89024894ECD00F04C8D /* README.md */; };
 		ACC2118D2487FE8F0014B8D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC2118C2487FE8F0014B8D0 /* AppDelegate.swift */; };
 		ACC2118F2487FE8F0014B8D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC2118E2487FE8F0014B8D0 /* SceneDelegate.swift */; };
 		ACC211912487FE8F0014B8D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC211902487FE8F0014B8D0 /* ViewController.swift */; };
 		ACC211942487FE8F0014B8D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC211922487FE8F0014B8D0 /* Main.storyboard */; };
 		ACC211962487FE900014B8D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACC211952487FE900014B8D0 /* Assets.xcassets */; };
 		ACC211992487FE900014B8D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC211972487FE900014B8D0 /* LaunchScreen.storyboard */; };
+		ACC211A524880AEE0014B8D0 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC211A424880AEE0014B8D0 /* Direction.swift */; };
+		ACC211A724880F060014B8D0 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC211A624880F060014B8D0 /* Position.swift */; };
+		ACC211AF2488128E0014B8D0 /* AoC2016_D01Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC211AE2488128E0014B8D0 /* AoC2016_D01Tests.swift */; };
+		ACC211B7248817230014B8D0 /* Turn.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC211B6248817230014B8D0 /* Turn.swift */; };
+		ACC211BA24884ACB0014B8D0 /* PositionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC211B924884ACB0014B8D0 /* PositionController.swift */; };
+		ACC211BC24884E0F0014B8D0 /* inputEasterBunnyInstructions in Resources */ = {isa = PBXBuildFile; fileRef = ACC211BB24884E0F0014B8D0 /* inputEasterBunnyInstructions */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		ACC211B12488128E0014B8D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACC211812487FE8F0014B8D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACC211882487FE8F0014B8D0;
+			remoteInfo = "AoC2016-D01";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		AC72C89024894ECD00F04C8D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		ACC211892487FE8F0014B8D0 /* AoC2016-D01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AoC2016-D01.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC2118C2487FE8F0014B8D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACC2118E2487FE8F0014B8D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,10 +42,25 @@
 		ACC211952487FE900014B8D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACC211982487FE900014B8D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACC2119A2487FE900014B8D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACC211A424880AEE0014B8D0 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
+		ACC211A624880F060014B8D0 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		ACC211AC2488128E0014B8D0 /* AoC2016-D01Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AoC2016-D01Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACC211AE2488128E0014B8D0 /* AoC2016_D01Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AoC2016_D01Tests.swift; sourceTree = "<group>"; };
+		ACC211B02488128E0014B8D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACC211B6248817230014B8D0 /* Turn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Turn.swift; sourceTree = "<group>"; };
+		ACC211B924884ACB0014B8D0 /* PositionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionController.swift; sourceTree = "<group>"; };
+		ACC211BB24884E0F0014B8D0 /* inputEasterBunnyInstructions */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = inputEasterBunnyInstructions; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		ACC211862487FE8F0014B8D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACC211A92488128E0014B8D0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,7 +74,9 @@
 			isa = PBXGroup;
 			children = (
 				ACC2118B2487FE8F0014B8D0 /* AoC2016-D01 */,
+				ACC211AD2488128E0014B8D0 /* AoC2016-D01Tests */,
 				ACC2118A2487FE8F0014B8D0 /* Products */,
+				AC72C89024894ECD00F04C8D /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -49,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				ACC211892487FE8F0014B8D0 /* AoC2016-D01.app */,
+				ACC211AC2488128E0014B8D0 /* AoC2016-D01Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,15 +92,53 @@
 		ACC2118B2487FE8F0014B8D0 /* AoC2016-D01 */ = {
 			isa = PBXGroup;
 			children = (
+				ACC211B824884AB20014B8D0 /* Controllers */,
+				ACC211A1248801C70014B8D0 /* Models */,
+				ACC211A0248800920014B8D0 /* Resources */,
+			);
+			path = "AoC2016-D01";
+			sourceTree = "<group>";
+		};
+		ACC211A0248800920014B8D0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ACC211922487FE8F0014B8D0 /* Main.storyboard */,
 				ACC2118C2487FE8F0014B8D0 /* AppDelegate.swift */,
 				ACC2118E2487FE8F0014B8D0 /* SceneDelegate.swift */,
-				ACC211902487FE8F0014B8D0 /* ViewController.swift */,
-				ACC211922487FE8F0014B8D0 /* Main.storyboard */,
 				ACC211952487FE900014B8D0 /* Assets.xcassets */,
 				ACC211972487FE900014B8D0 /* LaunchScreen.storyboard */,
 				ACC2119A2487FE900014B8D0 /* Info.plist */,
 			);
-			path = "AoC2016-D01";
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		ACC211A1248801C70014B8D0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ACC211A424880AEE0014B8D0 /* Direction.swift */,
+				ACC211A624880F060014B8D0 /* Position.swift */,
+				ACC211B6248817230014B8D0 /* Turn.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ACC211AD2488128E0014B8D0 /* AoC2016-D01Tests */ = {
+			isa = PBXGroup;
+			children = (
+				ACC211AE2488128E0014B8D0 /* AoC2016_D01Tests.swift */,
+				ACC211B02488128E0014B8D0 /* Info.plist */,
+			);
+			path = "AoC2016-D01Tests";
+			sourceTree = "<group>";
+		};
+		ACC211B824884AB20014B8D0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ACC211B924884ACB0014B8D0 /* PositionController.swift */,
+				ACC211902487FE8F0014B8D0 /* ViewController.swift */,
+				ACC211BB24884E0F0014B8D0 /* inputEasterBunnyInstructions */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +161,24 @@
 			productReference = ACC211892487FE8F0014B8D0 /* AoC2016-D01.app */;
 			productType = "com.apple.product-type.application";
 		};
+		ACC211AB2488128E0014B8D0 /* AoC2016-D01Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACC211B32488128E0014B8D0 /* Build configuration list for PBXNativeTarget "AoC2016-D01Tests" */;
+			buildPhases = (
+				ACC211A82488128E0014B8D0 /* Sources */,
+				ACC211A92488128E0014B8D0 /* Frameworks */,
+				ACC211AA2488128E0014B8D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ACC211B22488128E0014B8D0 /* PBXTargetDependency */,
+			);
+			name = "AoC2016-D01Tests";
+			productName = "AoC2016-D01Tests";
+			productReference = ACC211AC2488128E0014B8D0 /* AoC2016-D01Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +191,10 @@
 				TargetAttributes = {
 					ACC211882487FE8F0014B8D0 = {
 						CreatedOnToolsVersion = 11.5;
+					};
+					ACC211AB2488128E0014B8D0 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = ACC211882487FE8F0014B8D0;
 					};
 				};
 			};
@@ -116,6 +212,7 @@
 			projectRoot = "";
 			targets = (
 				ACC211882487FE8F0014B8D0 /* AoC2016-D01 */,
+				ACC211AB2488128E0014B8D0 /* AoC2016-D01Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -126,8 +223,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACC211992487FE900014B8D0 /* LaunchScreen.storyboard in Resources */,
+				ACC211BC24884E0F0014B8D0 /* inputEasterBunnyInstructions in Resources */,
+				AC72C89124894ECD00F04C8D /* README.md in Resources */,
 				ACC211962487FE900014B8D0 /* Assets.xcassets in Resources */,
 				ACC211942487FE8F0014B8D0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACC211AA2488128E0014B8D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,11 +246,31 @@
 			files = (
 				ACC211912487FE8F0014B8D0 /* ViewController.swift in Sources */,
 				ACC2118D2487FE8F0014B8D0 /* AppDelegate.swift in Sources */,
+				ACC211BA24884ACB0014B8D0 /* PositionController.swift in Sources */,
 				ACC2118F2487FE8F0014B8D0 /* SceneDelegate.swift in Sources */,
+				ACC211A724880F060014B8D0 /* Position.swift in Sources */,
+				ACC211B7248817230014B8D0 /* Turn.swift in Sources */,
+				ACC211A524880AEE0014B8D0 /* Direction.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACC211A82488128E0014B8D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACC211AF2488128E0014B8D0 /* AoC2016_D01Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ACC211B22488128E0014B8D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ACC211882487FE8F0014B8D0 /* AoC2016-D01 */;
+			targetProxy = ACC211B12488128E0014B8D0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		ACC211922487FE8F0014B8D0 /* Main.storyboard */ = {
@@ -286,7 +412,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6QY69PUF72;
-				INFOPLIST_FILE = "AoC2016-D01/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/AoC2016-D01/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +430,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6QY69PUF72;
-				INFOPLIST_FILE = "AoC2016-D01/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/AoC2016-D01/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,6 +439,46 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		ACC211B42488128E0014B8D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6QY69PUF72;
+				INFOPLIST_FILE = "AoC2016-D01Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joybending.AoC2016-D01Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AoC2016-D01.app/AoC2016-D01";
+			};
+			name = Debug;
+		};
+		ACC211B52488128E0014B8D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6QY69PUF72;
+				INFOPLIST_FILE = "AoC2016-D01Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joybending.AoC2016-D01Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AoC2016-D01.app/AoC2016-D01";
 			};
 			name = Release;
 		};
@@ -333,6 +499,15 @@
 			buildConfigurations = (
 				ACC2119E2487FE900014B8D0 /* Debug */,
 				ACC2119F2487FE900014B8D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACC211B32488128E0014B8D0 /* Build configuration list for PBXNativeTarget "AoC2016-D01Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACC211B42488128E0014B8D0 /* Debug */,
+				ACC211B52488128E0014B8D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
